@@ -10,10 +10,14 @@
 	bla
 	<span ng-app="minesweepApp">
 		<span ng-controller="fieldCtrl" ng-click="change()">
-			<input type="text" ng-model="score"/>
+			<input type="text" ng-model="$parent.score"/>
 		</span>
 		<span ng-controller="fieldCtrl" ng-click="change()">
-			{{score}}
+			<input type="text" ng-model="$parent.score"/>
+		</span>
+		<span ng-controller="plusMinus">
+			<input type="button" ng-click="inc()">INC</input>
+			<input type="button" ng-click="dec()">DEC</input>
 		</span>
 	</span>
 </body>
